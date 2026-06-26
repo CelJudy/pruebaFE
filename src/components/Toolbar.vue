@@ -1,10 +1,20 @@
 <script setup>
 //import { usePageTitle } from '~/composables/usePageTitle'; // Importa el composable personalizado
 import { useRouter } from 'vue-router'
+import BaseButton from '@/components/BaseButton.vue'
+import { Icon } from '@iconify/vue';
+
 const router = useRouter();
 
 import LanguageSelector from "./LanguageSelector.vue";
 import ThemeToggle from "./ThemeToggle.vue"; // Asegúrate de tener este componente importado
+
+const logOut = () => {
+    localStorage.removeItem("email");
+    localStorage.removeItem("role");
+    localStorage.removeItem("access-token");
+    router.push("/login");
+};
 
 //const pageTitle = computed(() => route.meta.title || ''); // Usa el composable personalizado
 const pageTitle ="home"
@@ -16,6 +26,12 @@ const pageTitle ="home"
     <div class="flex flex-wrap items-center justify-center sm:justify-end gap-3">
       <ThemeToggle/>
       <LanguageSelector/>
+      <BaseButton
+          color="error"
+          size="md"
+          @click="logOut"
+      ><Icon icon="material-symbols:logout" class="size-6"></Icon>
+    </BaseButton>
     </div>
   </div>
 </template>
