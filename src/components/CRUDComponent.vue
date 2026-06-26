@@ -4,6 +4,10 @@ import BaseButton from '@/components/BaseButton.vue'
 import BaseModal from "./BaseModal.vue";
 import BaseAlert from '@/components/BaseAlert.vue'
 import { Icon } from '@iconify/vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
 const props = defineProps({
     tableContents: {
         type: Array,
@@ -295,7 +299,7 @@ const confirmForm=async ()=>{
                 <BaseModal ref="formModalRef" size="md" :header="$t('crud.saveTitle')">
                     <template #content>
                         <template v-for="input in props.inputs">
-                            {{ t(`crud.${input.name}`) }}
+                            {{ $t(`crud.${input.name}`) }}
                             <select
                                 v-if="input.type=='select'"
                                 v-model="input.value"
