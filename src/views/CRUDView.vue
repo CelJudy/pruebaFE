@@ -81,7 +81,7 @@
     ]
 
     const deleteRow=async (id, index)=>{
-        const response=await deleteByID(`delete_user/${id}`);
+        const response=await deleteByID(`delete-user/${id}`);
         if(response!==null){
             const newTableContents=[...tableContents.value];
             newTableContents.splice(index,1);
@@ -101,7 +101,7 @@
             password:inputs[3].value
         }
 
-        const response=await addRow("create_user", data);
+        const response=await addRow("create-user", data);
         if(response!==null){
             tableContents.value.push(response);
             return true;
@@ -118,7 +118,7 @@
             password:inputs[3].value
         }
         
-        const response=await updateByID(`update_user/${id}`, data);
+        const response=await updateByID(`update-user/${id}`, data);
         if(response!==null){
 
             //const newTableContents=[...tableContents.value];
@@ -135,7 +135,7 @@
     }
 
     onBeforeMount (async () => {
-        const rows=await getRows("get_users");
+        const rows=await getRows("get-users");
         tableContents.value.push(...rows);
     })
     
