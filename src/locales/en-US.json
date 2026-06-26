@@ -18,6 +18,10 @@
     "recoverPassword": "Recover password",
     "users":"Users"
   },
+  "dashboard":{
+    "chartBar":"Registered Users",
+    "chartCacke":"Roles"
+  },
   "login": {
     "title": "Login",
     "subtitle": "Please enter your username and password",

@@ -18,6 +18,10 @@
     "recoverPassword": "Recuperar contraseña",
     "users":"Usuarios"
   },
+  "dashboard":{
+    "chartBar":"Usuarios registrados",
+    "chartCacke":"Roles"
+  },
   "login": {
     "title": "Inicio de sesión",
     "subtitle": "Ingresa tus datos para iniciar sesión",
