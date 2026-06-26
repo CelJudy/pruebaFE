@@ -1,0 +1,77 @@
+{
+  "app": {
+    "back": "Atrás",
+    "noNotifications":"Sin notificaciones"
+  },
+  "error": {
+    "error404Title": "No pudimos encontrar la página que buscas",
+    "error404Button": "Volver al inicio"
+  },
+  "pages": {
+    "home": "Inicio",
+    "example": "Ejemplos",
+    "autentication": "Autenticación",
+    "password":"Contraseña",
+    "login": "Iniciar sesión",
+    "error":"Error",
+    "forgotPassword": "Olvidé mi contraseña",
+    "recoverPassword": "Recuperar contraseña",
+    "users":"Usuarios"
+  },
+  "login": {
+    "title": "Inicio de sesión",
+    "subtitle": "Ingresa tus datos para iniciar sesión",
+    "login": "Iniciar Sesión",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "register": "Registrarse",
+    "submit": "Iniciar sesión",
+    "invalidCredentials": "Credenciales inválidas."
+  },
+  "forgotPassword": {
+    "title": "Recuperar contraseña",
+    "subtitle": "Ingresa tu correo electrónico para recuperar tu contraseña",
+    "submit": "Recuperar contraseña"
+  },
+  "recoverPassword": {
+    "title": "Recuperar contraseña",
+    "subtitle": "Ingresa tu nueva contraseña",
+    "confirmPassword": "Confirma tu nueva contraseña",
+    "submit": "Recuperar contraseña"
+  },
+  "validation": {
+    "username": "Nombre de usuario",
+    "usernameError": "El nombre de usuario es requerido",
+    "usernamePlaceholder": "Ingresa tu nombre de usuario",
+    "email": "Correo Electrónico",
+    "emailError": "El correo electrónico es requerido",
+    "emailPlaceholder": "Ingresa tu correo electrónico",
+    "password": "Contraseña",
+    "passwordError": "La contraseña es requerida",
+    "passwordPlaceholder": "Ingresa tu contraseña"
+  },
+  "crud":{
+    "actions":"Acciones",
+    "alertTitleSuccess":"Exito",
+    "alertContentDelete":"Dato eliminado correctamente",
+    "alertContentUpdate":"Dato actualizado correctamente",
+    "alertContentAdd":"Dato agregado correctamente",
+    "confirmTitle":"Seguro que quieres eliminar este dato?",
+    "confirm":"Confirmar",
+    "save":"Guardar",
+    "saveTitle":"Guardar dato",
+    "alertTitleError":"Error",
+    "alertContentErrorDelete":"Error al eliminar dato",
+    "alertContentErrorUpdate":"Error al actualizar dato",
+    "alertContentErrorAdd":"Error al agregar dato",
+    "to":"a",
+    "of":"de",
+    "results":"resultados",
+    "perPage":"por página",
+    "goToPage":"ir a página",
+    "id":"ID",
+    "name":"Nombre",
+    "email":"Correo electrónico",
+    "role":"Rol",
+    "password":"Contraseña"
+  }
+}

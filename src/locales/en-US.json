@@ -1,0 +1,77 @@
+{
+  "app": {
+    "back": "Back",
+    "noNotifications":"No notifications"
+  },
+  "error": {
+    "error404Title": "We couldn't find the page you were looking for",
+    "error404Button": "Go back to home"
+  },
+  "pages": {
+    "home": "Home",
+    "example": "Example",
+    "autentication": "Autentification",
+    "password":"Password",
+    "login": "Login",
+    "error":"Error",
+    "forgotPassword": "Forgot password",
+    "recoverPassword": "Recover password",
+    "users":"Users"
+  },
+  "login": {
+    "title": "Login",
+    "subtitle": "Please enter your username and password",
+    "login": "Login",
+    "forgotPassword": "Forgot Password?",
+    "register": "Register",
+    "submit": "Submit",
+    "invalidCredentials": "Invalid credentials."
+  },
+  "forgotPassword": {
+    "title": "Forgot password",
+    "subtitle": "Please enter your email address",
+    "submit": "Submit"
+  },
+  "recoverPassword": {
+    "title": "Recover password",
+    "subtitle": "Please enter your new password",
+    "confirmPassword": "Please confirm your password",
+    "submit": "Submit"
+  },
+  "validation": {
+    "username": "Username",
+    "usernameError": "Username is required",
+    "usernamePlaceholder": "Enter your username",
+    "email": "Email",
+    "emailError": "Email is required",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordError": "Password is required",
+    "passwordPlaceholder": "Enter your password"
+  },
+  "crud":{
+    "actions":"Actions",
+    "alertTitleSuccess":"Success",
+    "alertContentDelete":"Deleted data successfully",
+    "alertContentUpdate":"Updated data successfully",
+    "alertContentAdd":"Added data successfully",
+    "confirmTitle": "Are you sure you want to delete this data?",
+    "confirm":"Confirm",
+    "save":"Save",
+    "saveTitle":"Save data",
+    "alertTitleError":"Error",
+    "alertContentErrorDelete":"Error deleting data",
+    "alertContentErrorUpdate":"Error updating data",
+    "alertContentErrorAdd":"Error adding data",
+    "to":"to",
+    "of":"of",
+    "results":"results",
+    "perPage":"per page",
+    "goToPage":"go to page",
+    "id":"ID",
+    "name":"Name",
+    "email":"Email",
+    "role":"Role",
+    "password":"Password"
+  }
+}
