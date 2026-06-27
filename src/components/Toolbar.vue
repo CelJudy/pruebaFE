@@ -3,18 +3,12 @@
 import { useRouter } from 'vue-router'
 import BaseButton from '@/components/BaseButton.vue'
 import { Icon } from '@iconify/vue';
+import {logout} from "@/utils/index.js";
 
 const router = useRouter();
 
 import LanguageSelector from "./LanguageSelector.vue";
 import ThemeToggle from "./ThemeToggle.vue"; // Asegúrate de tener este componente importado
-
-const logOut = () => {
-    localStorage.removeItem("email");
-    localStorage.removeItem("role");
-    localStorage.removeItem("access-token");
-    router.push("/login");
-};
 
 //const pageTitle = computed(() => route.meta.title || ''); // Usa el composable personalizado
 const pageTitle ="home"
@@ -29,7 +23,7 @@ const pageTitle ="home"
       <BaseButton
           color="error"
           size="md"
-          @click="logOut"
+          @click="logout"
       ><Icon icon="material-symbols:logout" class="size-6"></Icon>
     </BaseButton>
     </div>

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import router from '@/router'
 
 const baseUrl = `${import.meta.env.VITE_API_BASE_URL || `http://${location.host.split(":")[0]}:8000`}/api/`
 
@@ -13,7 +14,6 @@ export const login=async (url, data)=>{
     }
     try{
         const respuesta=await axios.request(options);
-        console.log("respuesta", respuesta);
         return respuesta;
     }catch(error){
         return error;
@@ -33,9 +33,13 @@ export const getRows=async (url)=>{
         const respuesta=await axios.request(options);
         return respuesta.data;
     }catch(error){
-
+        if(error.status===401){
+            logout();
+        }
+        return error;
     }
 }
+
 export const addRow=async (url, data)=>{
     const options={
         method:"POST",
@@ -50,10 +54,13 @@ export const addRow=async (url, data)=>{
         const respuesta=await axios.request(options);
         return respuesta.data;
     }catch(error){
-        console.log(error);
+        if(error.status===401){
+            logout();
+        }
         return null;
     }
 }
+
 export const deleteByID=async (url)=>{
     const options={
         method:"DELETE",
@@ -67,10 +74,13 @@ export const deleteByID=async (url)=>{
         const respuesta=await axios.request(options);
         return respuesta.data;
     }catch(error){
-        console.log(error);
+        if(error.status===401){
+            logout();
+        }
         return null;
     }
 }
+
 export const updateByID=async (url, data)=>{
     const options={
         method:"PUT",
@@ -85,7 +95,28 @@ export const updateByID=async (url, data)=>{
         const respuesta=await axios.request(options);
         return respuesta.data;
     }catch(error){
-        console.log(error);
+        if(error.status===401){
+            logout();
+        }
         return null;
+    }
+}
+
+export const logout=async ()=>{
+    const options={
+        method:"DELETE",
+        url:`${baseUrl}logout/${localStorage.getItem("user_id")}`,
+        headers:{
+            'Content-Type':'application/json',
+        }
+    }
+    try{
+        await axios.request(options);
+        localStorage.removeItem("email");
+        localStorage.removeItem("role");
+        localStorage.removeItem("access-token");
+        localStorage.removeItem("user_id");
+        router.push("/login");
+    }catch(error){
     }
 }
