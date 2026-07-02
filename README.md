@@ -37,7 +37,7 @@ Inicia el servidor de desarrollo con:
 pnpm dev
 ```
 
-La aplicación quedará disponible en la URL que indique Vite, normalmente en http://localhost:5173.
+La aplicación quedará disponible en la URL http://localhost:4000.
 
 ## Compilación para producción
 

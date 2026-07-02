@@ -27,6 +27,7 @@ const onSubmit = async () => {
         localStorage.setItem("email", response.data.user.email);
         localStorage.setItem("role", response.data.user.role);
         localStorage.setItem("access-token", response.data.token.split("|")[1]);
+        localStorage.setItem("user_id", response.data.user.id);
         router.push("/");
     } else {
         if(response.status === 401){
