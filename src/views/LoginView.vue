@@ -70,10 +70,6 @@ const onSubmit = async () => {
                         :required="true"
                     />
 
-                    <RouterLink to="/forgot-password" class="link-text flex justify-end">
-                        {{ $t('login.forgotPassword') }}
-                    </RouterLink>
-
                     <BaseButton
                         class="mt-5 w-full"
                         color="primary"

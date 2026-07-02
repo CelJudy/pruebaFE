@@ -9,25 +9,21 @@
     const columns=[
         {
             name:'id',
-            title:'ID',
             type:"text",
             filtervalue:""
         },
         {
             name:'name',
-            title:'Nombre',
             type:"text",
             filtervalue:""
         },
         {
             name:'email',
-            title:'Correo',
             type:"text",
             filtervalue:""
         },
         {
             name:'role',
-            title:'Rol',
             type:"select",
             filtervalue:"",
             options:[

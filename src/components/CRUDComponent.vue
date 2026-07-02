@@ -86,15 +86,28 @@ let addRow=true;
 const searchRow=(event)=>{
     if(event.keyCode==13 || event.keyCode===undefined){
         let allContent=[];
-        props.tableContents.forEach(element => {
+        props.tableContents.forEach(currentRow => {
             addRow=true;
             props.columns.forEach(filter => {
-                if(filter.filtervalue!="" && filter.filtervalue!=element[filter.name] && filter.filtervalue!=element[filter.name].id){
-                    addRow=false;
+                if(filter.name=="id"){
+                    if(filter.filtervalue!=currentRow[filter.name] && filter.filtervalue!=""){
+                        console.log("filtro1");
+                        addRow=false;
+                    }
+                }else{
+                    if(filter.type=="select"){
+                        if(filter.filtervalue!=currentRow[filter.name] && filter.filtervalue!=""){
+                            console.log("filtro2", filter.filtervalue, currentRow[filter.name]);
+                            addRow=false;
+                        }
+                    }else if(!currentRow[filter.name].includes(filter.filtervalue) && filter.filtervalue!=""){
+                        console.log("filtro3");
+                        addRow=false;
+                    }
                 }
             });
             if(addRow){
-                allContent.push(element);
+                allContent.push(currentRow);
             }
         });
         allTableContents.value=allContent;
